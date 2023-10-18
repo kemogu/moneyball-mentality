@@ -14,8 +14,18 @@ This desktop application aims to retrieve statistics from Football Manager game 
 Here are some screenshots from the application:
 
 ![Screenshot 3](ss1.png)
+
 ![Screenshot 2](ss2.png)
+
 ![Screenshot 1](ss3.png)
+
+Contribution
+If you want to contribute to this project, you can submit pull requests.
+License
+This project is licensed under the MIT License. For more information, see the LICENSE.md file.
+
+Contact
+If you have any questions or suggestions, please feel free to reach out: kemaloguzhanyeyit@gmail.com
 
 ## Requirements
 
@@ -42,12 +52,6 @@ Copy code
 python main.py
 Analyze players using the application interface.
 **You need to contact me for the views to be used in the game.**
-Contribution
-If you want to contribute to this project, you can submit pull requests.
-License
-This project is licensed under the MIT License. For more information, see the LICENSE.md file.
 
-Contact
-If you have any questions or suggestions, please feel free to reach out: kemaloguzhanyeyit@gmail.com
 
 
