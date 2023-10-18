@@ -10,6 +10,13 @@ This desktop application aims to retrieve statistics from Football Manager game 
 - Create graphs and statistics.
 - Save and export data (CSV, Excel, etc.).
 
+## Screenshots
+Here are some screenshots from the application:
+
+![Screenshot 3](ss1.png)
+![Screenshot 2](ss2.png)
+![Screenshot 1](ss3.png)
+
 ## Requirements
 
 - Python 3.x
@@ -17,7 +24,7 @@ This desktop application aims to retrieve statistics from Football Manager game 
 
 ## Installation
 
-1. Clone the project files from this repository.
+Clone the project files from this repository.
 
 ```bash
 git clone https://github.com/kemogu/moneyball-mentality
@@ -43,10 +50,4 @@ This project is licensed under the MIT License. For more information, see the LI
 Contact
 If you have any questions or suggestions, please feel free to reach out: kemaloguzhanyeyit@gmail.com
 
-## Screenshots
-Here are some screenshots from the application:
-
-(ss1.png)
-(ss2.png)
-(ss3.png)
 
