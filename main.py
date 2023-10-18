@@ -36,7 +36,7 @@ img = PhotoImage(file="stars.png")
 l2 = tk.Label(my_w, image=img)
 l2.pack(fill=X, pady=5)
 
-l1 = tk.Label(my_w,text='SELECT YOUR .xlsx FILE',width=30,font=my_font1)
+l1 = tk.Label(my_w,text='SELECT YOUR .html FILE',width=30,font=my_font1)
 l1.pack(fill=X, pady=5)
 
 b1 = tk.Button(my_w, text='For Squad Developing Analysis', width=20, command=lambda:squadAnalysis())
