@@ -1,8 +1,6 @@
-﻿# moneyball-mentality
+﻿# Footballer Analysis Application
 
-# Football Analysis Application
-
-This desktop application aims to retrieve statistics from Football Manager game players and analyze them.
+This desktop application aims to retrieve statistics from Football Manager game footballers and analyze them.
 
 ## Features
 
@@ -45,10 +43,10 @@ This project is licensed under the MIT License. For more information, see the LI
 Contact
 If you have any questions or suggestions, please feel free to reach out: kemaloguzhanyeyit@gmail.com
 
-Screenshots
+## Screenshots
 Here are some screenshots from the application:
 
-ss1.png
-ss2.png
-ss3.png
+(ss1.png)
+(ss2.png)
+(ss3.png)
 
