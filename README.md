@@ -11,6 +11,27 @@ This desktop application aims to retrieve statistics from Football Manager game 
 - Create statistics.
 - Save and export data (Excel format).
 
+## Detailed Features:
+
+This program has 4 capabilities. These abilities are:
+
+- For Squad Development Analysis
+- For Moneyball Attribute Analysis
+- For Moneyball Statistical Analysis
+- For Coach and Staff Analysis
+
+For Squad Development Analysis:
+With this feature, you can see in detail how much the players in your squad have developed over the years. For example, you took a screenshot of your squad in 2023. Then you took another screenshot in 2024. By selecting the option, you first select the screenshot in 2023 and then the screenshot in 2024. The program provides you with detailed development of the players in your squad as output.
+
+For Moneyball Attribute Analysis:
+This feature can be used both in the squad section and the transfer section. The feature of this section analyzes the characteristics of the actors in the screenshot and tells you how well they played each role.
+
+For Moneyball Statistical Analysis:
+This feature, which can only be used on the transfer screen, evaluates players by using their statistics. This rating is divided into 5. They are categorized as keeper, defender, presser, winger, creater and finisher.
+
+For Coach and Staff Analysis:
+This feature works with the screenshot of my staff section. It presents the score of each staff member in all roles to the user.
+
 ## Installation 
 
 - Download the setup file from the Releases section and unzip it.
@@ -29,6 +50,27 @@ Bu masaüstü uygulaması, Football Manager oyunu futbolcularından istatistik a
 - Oyuncular için sıralama ve filtreleme seçenekleri.
 - İstatistikler oluşturun.
 - Verileri kaydedin ve dışa aktarın (Excel formatı).
+
+## Detaylı Özellikler:
+
+Bu programın 4 yeteneği bulunmaktadır. Bu yetenekler şunlardır:
+
+- Kadro Geliştirme Analizi İçin
+- Moneyball Nitelik Analizi İçin
+- Moneyball İstatistik Analizi İçin
+- Koç ve Personel Analizi İçin
+
+Kadro Geliştirme Analizi İçin:
+Bu özellik sayesinde, kadronuzdaki oyuncuların yıllar içinde ne kadar geliştiğini detaylı olarak görebilirsiniz. Örneğin, 2023'teki kadronuzun bir ekran görüntüsünü aldınız. Sonra 2024'te başka bir ekran görüntüsü aldınız. Seçenekleri seçerek önce 2023'teki ekran görüntüsünü seçersiniz, ardından 2024'teki ekran görüntüsünü seçersiniz. Program, size kadronuzdaki oyuncuların detaylı gelişimini çıktı olarak sunar.
+
+Moneyball Nitelik Analizi İçin:
+Bu özellik hem kadro bölümünde hem de transfer bölümünde kullanılabilir. Bu bölümün özelliği, ekran görüntüsündeki oyuncuların özelliklerini analiz eder ve her rolü ne kadar iyi oynadıklarını size söyler.
+
+Moneyball İstatistik Analizi İçin:
+Sadece transfer ekranında kullanılabilen bu özellik, oyuncuları istatistiklerini kullanarak değerlendirir. Bu değerlendirme 5 kategoriye ayrılmıştır. Onlar kaleci, defans oyuncusu, baskıcı, kanat oyuncusu, yaratıcı ve bitirici olarak kategorize edilirler.
+
+Koç ve Personel Analizi İçin:
+Bu özellik, personel bölümündeki ekran görüntüsü ile çalışır. Kullanıcıya her personel üyesinin tüm rollerdeki puanını sunar.
 
 ## Kurulum
 
