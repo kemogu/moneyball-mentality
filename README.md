@@ -1,5 +1,6 @@
-﻿# Footballer Analysis Application
+﻿# Moneyball Mentality Application
 
+#ENG
 This desktop application aims to retrieve statistics from Football Manager game footballers and analyze them.
 
 ## Features
@@ -7,10 +8,22 @@ This desktop application aims to retrieve statistics from Football Manager game 
 - View basic statistics of players (name, age, club, position, etc.).
 - Analyze players' performance data.
 - Sorting and filtering options for players.
-- Create graphs and statistics.
-- Save and export data (CSV, Excel, etc.).
+- Create statistics.
+- Save and export data (Excel format).
 
-## Screenshots
+#TR
+Bu masaüstü uygulaması, Football Manager oyunu futbolcularından istatistik almayı ve bunları analiz etmeyi amaçlamaktadır.
+
+## Özellikler
+
+- Oyuncuların temel istatistiklerini görüntüleyin (isim, yaş, kulüp, pozisyon vb.).
+- Oyuncuların performans verilerini analiz edin.
+- Oyuncular için sıralama ve filtreleme seçenekleri.
+- İstatistikler oluşturun.
+- Verileri kaydedin ve dışa aktarın (Excel formatı).
+
+## Screenshots / Ekran görüntüleri
+
 Here are some screenshots from the application:
 
 ![Screenshot 3](ss1.png)
@@ -19,39 +32,6 @@ Here are some screenshots from the application:
 
 ![Screenshot 1](ss3.png)
 
-Contribution
-If you want to contribute to this project, you can submit pull requests.
-License
-This project is licensed under the MIT License. For more information, see the LICENSE.md file.
-
-Contact
-If you have any questions or suggestions, please feel free to reach out: kemaloguzhanyeyit@gmail.com
-
-## Requirements
-
-- Python 3.x
-- Relevant Python libraries (e.g., pandas, matplotlib, numpy)
-
-## Installation
-
-Clone the project files from this repository.
-
-```bash
-git clone https://github.com/kemogu/moneyball-mentality
-Install Python 3.x.
-
-Run the following command to install the requirements:
-
-bash
-Copy code
-pip install -r requirements.txt
-Usage
-Run the application:
-bash
-Copy code
-python main.py
-Analyze players using the application interface.
-**You need to contact me for the views to be used in the game.**
 
 
 
