@@ -1,29 +1,10 @@
-import openpyxl
-import nltk
-import fileinput
-from collections import defaultdict
-from openpyxl.utils import get_column_letter
 import tkinter as tk
-from tkinter import *
-from tkinter import filedialog
-from tkinter.filedialog import askopenfile
-from tkinter import messagebox
-import json
+from tkinter import X, filedialog
+import openpyxl
 from openpyxl import Workbook
-from openpyxl.utils.dataframe import dataframe_to_rows
-import pandas as pd
 from openpyxl.styles import PatternFill
 from bs4 import BeautifulSoup
-from openpyxl.formatting.rule import CellIsRule
-
-green_fill = PatternFill(start_color='00FF00', end_color='00FF00', fill_type='solid')
-light_green_fill = PatternFill(start_color="FF99FF99", end_color="FF99FF99", fill_type="solid")
-lighter_green_fill = PatternFill(start_color="FFCCFFCC", end_color="FFCCFFCC", fill_type="solid")
-gray_fill = PatternFill(start_color='A9A9A9', end_color='A9A9A9', fill_type='solid')
-yellow_fill = PatternFill(start_color='FFFF00', end_color='FFFF00', fill_type='solid')
-red_fill = PatternFill(start_color="FFFF0000", end_color="FFFF0000", fill_type="solid")
-open_red_fill = PatternFill(start_color="FFFF6666", end_color="FFFF6666", fill_type="solid")
-lighter_red_fill = PatternFill(start_color="FFFF9999", end_color="FFFF9999", fill_type="solid")
+import json
 
 
 my_w = tk.Tk()
@@ -32,7 +13,7 @@ my_w.title('FMCACBH')
 my_font1=('Arial', 18, 'bold')
 my_font2=('Arial', 10)
 
-img = PhotoImage(file="stars.png")
+img = tk.PhotoImage(file="stars.png")
 l2 = tk.Label(my_w, image=img)
 l2.pack(fill=X, pady=5)
 
@@ -56,6 +37,15 @@ l3.pack(fill=X, pady=5)
 
 my_w.columnconfigure(0, weight=1)
 my_w.rowconfigure(0, weight=1)
+
+green_fill = PatternFill(start_color='00FF00', end_color='00FF00', fill_type='solid')
+light_green_fill = PatternFill(start_color="FF99FF99", end_color="FF99FF99", fill_type="solid")
+lighter_green_fill = PatternFill(start_color="FFCCFFCC", end_color="FFCCFFCC", fill_type="solid")
+gray_fill = PatternFill(start_color='A9A9A9', end_color='A9A9A9', fill_type='solid')
+yellow_fill = PatternFill(start_color='FFFF00', end_color='FFFF00', fill_type='solid')
+red_fill = PatternFill(start_color="FFFF0000", end_color="FFFF0000", fill_type="solid")
+open_red_fill = PatternFill(start_color="FFFF6666", end_color="FFFF6666", fill_type="solid")
+lighter_red_fill = PatternFill(start_color="FFFF9999", end_color="FFFF9999", fill_type="solid")
 
 def squadAnalysis() :
     file_path = filedialog.askopenfilename(filetypes=[("HTML Dosyaları", "*.html")])
@@ -210,6 +200,7 @@ def moneyballAttMentality():
     skDefSum = sum(json_data['skDef'].values())
     skSupSum = sum(json_data['skSup'].values())
     skAtSum = sum(json_data['skAt'].values())
+    ifbDefSum = sum(json_data['ifbDef'].values())
     fbDefSum = sum(json_data['fbDef'].values())
     fbSupSum = sum(json_data['fbSup'].values())
     fbAtSum = sum(json_data['fbAt'].values())
@@ -231,8 +222,8 @@ def moneyballAttMentality():
     bpdDefSum = sum(json_data['bpdDef'].values())
     bpdStSum = sum(json_data['bpdSt'].values())
     bpdCoSum = sum(json_data['bpdCo'].values())
+    lDefSum = sum(json_data['lDef'].values())
     lSupSum = sum(json_data['lSup'].values())
-    lAtSum = sum(json_data['lAt'].values())
     wcbDefSum = sum(json_data['wcbDef'].values())
     wcbSupSum = sum(json_data['wcbSup'].values())
     wcbAtSum = sum(json_data['wcbAt'].values())
@@ -332,6 +323,8 @@ def moneyballAttMentality():
                             zip(json_data['skSup'].keys(), player_att))
                 skAt = sum(att_value * json_data['skAt'][att_name] for att_name, att_value in
                            zip(json_data['skAt'].keys(), player_att))
+                ifbDef = sum(att_value * json_data['ifbDef'][att_name] for att_name, att_value in
+                            zip(json_data['ifbDef'].keys(), player_att))
                 fbDef = sum(att_value * json_data['fbDef'][att_name] for att_name, att_value in
                             zip(json_data['fbDef'].keys(), player_att))
                 fbSup = sum(att_value * json_data['fbSup'][att_name] for att_name, att_value in
@@ -374,10 +367,10 @@ def moneyballAttMentality():
                             zip(json_data['bpdSt'].keys(), player_att))
                 bpdCo = sum(att_value * json_data['bpdCo'][att_name] for att_name, att_value in
                             zip(json_data['bpdCo'].keys(), player_att))
+                lDef = sum(att_value * json_data['lDef'][att_name] for att_name, att_value in
+                           zip(json_data['lDef'].keys(), player_att))
                 lSup = sum(att_value * json_data['lSup'][att_name] for att_name, att_value in
-                           zip(json_data['lSup'].keys(), player_att))
-                lAt = sum(att_value * json_data['lAt'][att_name] for att_name, att_value in
-                          zip(json_data['lAt'].keys(), player_att))
+                          zip(json_data['lSup'].keys(), player_att))
                 wcbDef = sum(att_value * json_data['wcbDef'][att_name] for att_name, att_value in
                              zip(json_data['wcbDef'].keys(), player_att))
                 wcbSup = sum(att_value * json_data['wcbSup'][att_name] for att_name, att_value in
@@ -500,6 +493,7 @@ def moneyballAttMentality():
                     "SK-DE": skDef,
                     "SK-SU": skSup,
                     "SK-AT": skAt,
+                    "IFB-DE": ifbDef,
                     "FB-DE": fbDef,
                     "FB-SU": fbSup,
                     "FB-AT": fbAt,
@@ -521,8 +515,8 @@ def moneyballAttMentality():
                     "BPD-DE": bpdDef,
                     "BPD-ST": bpdSt,
                     "BPD-CO": bpdCo,
+                    "L-DE": lDef,
                     "L-SU": lSup,
-                    "L-AT": lAt,
                     "WCB-DE": wcbDef,
                     "WCB-SU": wcbSup,
                     "WCB-AT": wcbAt,
@@ -597,6 +591,7 @@ def moneyballAttMentality():
         "SK-DE",
         "SK-SU",
         "SK-AT",
+        "IFB-DE",
         "FB-DE",
         "FB-SU",
         "FB-AT",
@@ -618,8 +613,8 @@ def moneyballAttMentality():
         "BPD-DE",
         "BPD-ST",
         "BPD-Co",
+        "L-DE",
         "L-SU",
-        "L-AT",
         "WCB-DE",
         "WCB-SU",
         "WCB-AT",
@@ -694,6 +689,7 @@ def moneyballAttMentality():
             round(player['SK-DE'] / skDefSum, 1),
             round(player['SK-SU'] / skSupSum, 1),
             round(player['SK-AT'] / skAtSum, 1),
+            round(player['IFB-DE'] / ifbDefSum, 1),
             round(player['FB-DE'] / fbDefSum, 1),
             round(player['FB-SU'] / fbSupSum, 1),
             round(player['FB-AT'] / fbAtSum, 1),
@@ -715,8 +711,8 @@ def moneyballAttMentality():
             round(player['BPD-DE'] / bpdDefSum, 1),
             round(player['BPD-ST'] / bpdStSum, 1),
             round(player['BPD-CO'] / bpdCoSum, 1),
+            round(player['L-DE'] / lDefSum, 1),
             round(player['L-SU'] / lSupSum, 1),
-            round(player['L-AT'] / lAtSum, 1),
             round(player['WCB-DE'] / wcbDefSum, 1),
             round(player['WCB-SU'] / wcbSupSum, 1),
             round(player['WCB-AT'] / wcbAtSum, 1),
@@ -790,7 +786,7 @@ def moneyballAttMentality():
     sheet = new_workbook.active
 
     start_column = 2
-    end_column = 85
+    end_column = 86
 
 
     for row_number, row in enumerate(sheet.iter_rows(min_row=2, min_col=start_column, max_col=end_column), start=2):
@@ -819,19 +815,19 @@ def moneyballAttMentality():
                     first_element_of_max_column = cell.value
                     break
                 break
-        sheet.cell(row=row_number, column=91).value = first_element_of_max_column
-        sheet.cell(row = row_number ,column=92).value= max_value
+        sheet.cell(row=row_number, column=92).value = first_element_of_max_column
+        sheet.cell(row = row_number ,column=93).value= max_value
         if max_value <= 5:
-            sheet.cell(row = row_number ,column=92).fill = gray_fill
+            sheet.cell(row = row_number ,column=93).fill = gray_fill
         elif max_value > 5 and max_value <= 10:
             pass
         elif max_value > 10 and max_value <= 15:
-            sheet.cell(row = row_number ,column=92).fill = yellow_fill
+            sheet.cell(row = row_number ,column=93).fill = yellow_fill
         elif max_value > 15 and max_value <= 20:
-            sheet.cell(row = row_number ,column=92).fill = green_fill
-        if sheet.cell(row=row_number, column=86).value == 0:
-            sheet.cell(row=row_number, column=86).value = 1
-        sheet.cell(row=row_number, column=93).value = max_value / sheet.cell(row=row_number, column=86).value
+            sheet.cell(row = row_number ,column=93).fill = green_fill
+        if sheet.cell(row=row_number, column=87).value == 0:
+            sheet.cell(row=row_number, column=87).value = 1
+        sheet.cell(row=row_number, column=94).value = max_value / sheet.cell(row=row_number, column=86).value
 
     new_workbook.save(save_path)
 
@@ -863,6 +859,7 @@ def coachAnalysis() :
     headPhysioSum = sum(json_data['headPhysio'].values())
     headOfSportsScienceSum = sum(json_data['headOfSportsScience'].values())
     physioSum = sum(json_data['physio'].values())
+    setPiceceCoachSum = sum(json_data['setPiceceCoach'].values())
     sportScientistSum = sum(json_data['sportScientist'].values())
 
     file_path = filedialog.askopenfilename(filetypes=[("HTML Dosyaları", "*.html")])
@@ -934,6 +931,8 @@ def coachAnalysis() :
                               zip(json_data['headOfSportsScience'].keys(), coachAtts))/headOfSportsScienceSum
                 physio = sum(att_value * json_data['physio'][att_name] for att_name, att_value in
                               zip(json_data['physio'].keys(), coachAtts))/physioSum
+                setPiceceCoach = sum(att_value * json_data['setPiceceCoach'][att_name] for att_name, att_value in
+                              zip(json_data['setPiceceCoach'].keys(), coachAtts))/setPiceceCoachSum
                 sportScientist = sum(att_value * json_data['sportScientist'][att_name] for att_name, att_value in
                               zip(json_data['sportScientist'].keys(), coachAtts))/sportScientistSum
 
@@ -950,7 +949,7 @@ def coachAnalysis() :
                                     goalkeepingCoachHandlingandDistribution, fitnessCoachStrength, fitnessCoachQuickness, defendingTechnical,
                                     defendingTactical, possessionTechnical, possessionTactical, attackingTechnical, attackingTactical, headPerformanceAnalyst,
                                     performanceAnalyst, directorOfFootball, technicalDirector, chiefScout, scout, recruitmentAnalyst, loanManager, headPhysio,
-                                    headOfSportsScience, physio, sportScientist],
+                                    headOfSportsScience, physio,setPiceceCoach, sportScientist],
                 }
                 data.append(staff_dict)
 
@@ -964,7 +963,7 @@ def coachAnalysis() :
               "Defending (Technical)", "Defending (Tactical)", "Possession (Technical)", "Possession (Tactical)",
               "Attacking (Technical)", "Attacking (Tactical)", "Head Performance Analyst", "Performance Analyst",
               "Director of Football", "Technical Director", "Chief Scout", "Scout", "Recruitment Analyst",
-              "Loan Manager", "Head Physio", "Head of Sports Science", "Physio", "Sport Scientist"]
+              "Loan Manager", "Head Physio", "Head of Sports Science", "Physio","Set Piece Coach", "Sport Scientist"]
     new_sheet.append(header)
 
     # Verileri ekleyin
