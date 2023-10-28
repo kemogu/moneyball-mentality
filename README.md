@@ -1,6 +1,6 @@
 ﻿# Moneyball Mentality Application
 
-#ENG
+# ENG
 This desktop application aims to retrieve statistics from Football Manager game footballers and analyze them.
 
 ## Features
@@ -11,7 +11,7 @@ This desktop application aims to retrieve statistics from Football Manager game 
 - Create statistics.
 - Save and export data (Excel format).
 
-#TR
+# TR
 Bu masaüstü uygulaması, Football Manager oyunu futbolcularından istatistik almayı ve bunları analiz etmeyi amaçlamaktadır.
 
 ## Özellikler
